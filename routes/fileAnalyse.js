@@ -7,6 +7,6 @@ const upload = multer({ dest: '/tmp/uploads/' })
 const fileAnalyseController = require('../controllers/fileAnalyseController')
 
 /* POST a file to analyze. */
-router.post('/fileanalyze', upload.single('uploaded-file'), fileAnalyseController.analyse)
+router.post('/fileanalyse', upload.single('upfile'), fileAnalyseController.analyse)
 
 module.exports = router;

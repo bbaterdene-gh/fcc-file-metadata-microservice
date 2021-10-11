@@ -1,9 +1,9 @@
 
 exports.analyse = async (req, res) => {
-  console.log('here')
+  const upfile = req.file
   res.json({
-    name: 'name',
-    type: 'type',
-    size: 123,
+    name: upfile.originalname,
+    type: upfile.mimetype,
+    size: upfile.size,
   })
 }
